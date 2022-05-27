@@ -21,7 +21,7 @@ s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
 s.resources = 'SobotOrder.bundle'
 s.ios.vendored_frameworks = 'SobotOrderSDK.framework'
-s.dependency = 'SobotCommon'
+s.dependency 'SobotCommon','1.0.0'
 
 
 end
