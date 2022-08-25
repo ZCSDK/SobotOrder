@@ -5,7 +5,7 @@
 //  Created by zhangxy on 2022/4/1.
 //
 
-#import <SobotCommon/SobotCommon.h>
+#import <SobotOrderSDK/SobotOrderDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

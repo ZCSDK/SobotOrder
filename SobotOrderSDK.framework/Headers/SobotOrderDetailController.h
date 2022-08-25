@@ -5,7 +5,7 @@
 //  Created by lizh on 2022/3/31.
 //
 
-#import <SobotCommon/SobotCommon.h>
+#import <SobotOrderSDK/SobotOrderDefines.h>
 #import "SobotOrderInfoEntity.h"
 typedef void(^LoadDataBlock)();
 NS_ASSUME_NONNULL_BEGIN
