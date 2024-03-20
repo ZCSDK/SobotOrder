@@ -6,7 +6,7 @@
 //
 
 #import <SobotOrderSDK/SobotOrderDefines.h>
-#import "SobotOrderInfoEntity.h"
+#import <SobotOrderSDK/SobotOrderInfoEntity.h>
 typedef void(^LoadDataBlock)();
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) SobotOrderDetailEntity *model;
 @property (nonatomic,copy) NSString * ticketId; // 当前从设置页面跳转到 工单详情页面时使用 无工单model
 @property (nonatomic,copy) LoadDataBlock loadDatablock;
+
 @end
 
 NS_ASSUME_NONNULL_END

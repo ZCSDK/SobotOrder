@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *fileType;
 @property (nonatomic,strong) NSString *fileUrl;
 
+@property (nonatomic,strong) NSString *converPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

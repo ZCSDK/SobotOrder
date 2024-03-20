@@ -12,8 +12,11 @@
 // 国际化
 #define SobotOrderLocalString(key) [[SobotOrderCache shareSobotOrderCache] localOrderString:key]
 
+static SobotTypeColor const SobotColorBgLineOF5  = @"SobotColorBgLineOF5";// 新增默认背景"#F5F5F5";
+
+
 // 资源
-#define SobotOrderGetImage(imageName) [SobotOrderCache getOrderSysImage:imageName bundleName:CallBundelName]
+#define SobotOrderGetImage(imageName) [SobotOrderCache getOrderSysImage:imageName]
 // 颜色
 #define UIColorFromOrderModeColor(themeColorKey) [SobotUITools getSobotThemeModeColor:themeColorKey  bundleName:OrderBundelName]
 #define UIColorFromOrderModeColorAlpha(themeColorKey,a) [SobotUITools getSobotThemeModeColor:themeColorKey alpha:a bundleName:OrderBundelName]

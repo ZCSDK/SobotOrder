@@ -73,9 +73,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *replyContent; //"我是工单内容吗地方是的是发顺丰的",
 @property (nonatomic, strong) NSString *replyTime;    //1463555932,
 @property (nonatomic, strong) NSString *replyUserName; //"zhangxy@sobot.com"
+
+// 1 代表是开启了仅客服可见  0 代表是所有人可见
 @property (nonatomic, assign) int      replyType; //"zhangxy@sobot.com"
 
-
+// 工单关联的ID
+@property (nonatomic, strong) NSString *customerId;// 抄送副本
 
 @property (nonatomic, strong) NSString *userName;// 抄送副本
 @property (nonatomic, strong) NSString *dealGroupName;//": "",
@@ -110,6 +113,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * tel;// 工单来源的电话
 
 @property (nonatomic,copy) NSString * ticketFrom;// 工单来源
+@property (nonatomic,copy) NSString * ticketFromName;// 工单来源
 
 // 详情页区头显示工单模板字段使用
 @property (nonatomic,strong) NSMutableArray *headerShowList;
@@ -120,6 +124,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * voiceUrl; // 语音留言的工单 语音文件的路径
 @property(nonatomic , strong) NSString   *isConcerned; // 是否关注  1 ：关注  0 ： 未关注
 
+@property(nonatomic,assign) int orderReplyType;// 工单回复类型
+
+@property(nonatomic,strong) NSMutableArray *telArr;//回复工单记录电话号
+@property(nonatomic,copy)NSString *userNick;// 回复工单记录用户昵称
+//优先联络方式字段
+//    //优先联系方式的类型 1: 邮箱 2：电话
+//    private Integer firstContactType;
+//    //优先联系方式的值
+//    private String firstContactInfo;
+@property(nonatomic,assign)int firstContactType;
+@property(nonatomic,copy)NSString *firstContactInfo;
 
 // 获取模板字段、非模板字段、停用字段集合
 // 二维数组[@"1":模板arr，"2":非模板数组，”3“，停用字段arr]
@@ -145,6 +160,14 @@ NS_ASSUME_NONNULL_BEGIN
 // 0 所有人，1仅客服
 @property (nonatomic, assign) int      replyType;//
 @property (nonatomic, strong) NSString *replyTypeText;//
+
+
+@property(nonatomic,assign) int dealLogType;// 回复类型 1 代表是语音回复
+@property(nonatomic,copy) NSString *callRecordUrl;//呼叫录音地址
+@property(nonatomic,copy) NSString *calledTel;//被呼叫的手机号
+@property(nonatomic,copy) NSString *callId;//通话id
+@property(nonatomic,assign) int duration;// 通话时长
+
 -(id)initWithMyDict:(NSDictionary *)dict;
 @end
 

@@ -17,9 +17,19 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 -(void)gologin;
 @end
+
+typedef void(^SoboOrderCallBlock)(NSString *_Nullable userNick,NSString *_Nullable orderId,NSDictionary *_Nullable callDict ,int type, NSString *_Nullable customId);
+
+typedef void(^GetCallInfoBlock)(NSDictionary *info);
+
 @interface SobotOrderClient : NSObject
 
 @property(nonatomic,weak)id <SobotOrderClientDelegate>delegate;
+
+@property(nonatomic,copy) SoboOrderCallBlock callBlcok;
+
+
+@property(nonatomic,copy) GetCallInfoBlock getCallInfoBlock;
 
 +(SobotOrderClient *) getSobotOrderClient;
 

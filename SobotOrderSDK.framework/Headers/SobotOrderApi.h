@@ -13,10 +13,13 @@
 // code == 1成功
 typedef void(^SobotResultBlock)(NSInteger code,id _Nullable obj,NSString *_Nullable msg);
 
+// type 0 打电话 1 获取当前是否正在通话 是否同一个工单会话  2 获取电话条是否签入
+typedef void(^SoboOrderCallBlock)(NSString *_Nullable userNick, NSString *_Nullable orderId,NSDictionary *_Nullable callDict ,int type,NSString *_Nullable customId);
+
+typedef NSDictionary* _Nonnull (^SobotOrderCallInfoBlock)(NSString *_Nullable userNick, NSString *_Nullable orderId,NSDictionary *_Nullable callDict ,int type,NSString *_Nullable customId);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SobotOrderApi : NSObject
-
 
 /// 跳转到调试页面
 /// @param vc 启动VC
@@ -83,6 +86,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置是否 Debug模式，默认为NO，不显示日志
 /// @param isShowDebug  YES or NO
 +(void)setShowDebug:(BOOL) isShowDebug;
+
+
+
+/// 回复外呼事件
+/// @param resultBlock resultBlock description
++(void)callActionResultBlock:(SoboOrderCallBlock) resultBlock;
 
 @end
 
