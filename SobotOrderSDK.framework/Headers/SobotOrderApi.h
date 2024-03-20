@@ -93,6 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param resultBlock resultBlock description
 +(void)callActionResultBlock:(SoboOrderCallBlock) resultBlock;
 
+// 仅App使用 SDK不没有呼叫功能 不能使用语音回复
++(void)setIsAddCall:(BOOL)isAddCall;
 @end
 
 NS_ASSUME_NONNULL_END

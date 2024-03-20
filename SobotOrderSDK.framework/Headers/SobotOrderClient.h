@@ -31,6 +31,8 @@ typedef void(^GetCallInfoBlock)(NSDictionary *info);
 
 @property(nonatomic,copy) GetCallInfoBlock getCallInfoBlock;
 
+@property(nonatomic,assign) BOOL isNoHiddeCall;// SDK不能使用电话回复功能
+
 +(SobotOrderClient *) getSobotOrderClient;
 
 -(void)initSDKWith:(NSString *) apiHost config:(SobotCacheEntity *)config;
