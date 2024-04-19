@@ -206,10 +206,11 @@
 "好的" = "OK";
 
 "松开立即刷新"="Release immediately refresh";
+"松开立即加载更多"="Release immediately refresh";
 "下拉可以刷新"="Drop-down can be refreshed";
 "正在刷新数据"="Refreshing data";
+"正在加载数据"="Refreshing data";
 "没有更多数据了"="No more data";
-"下拉可以刷新"="Drop-down can be refreshed";
 
 "最后更新"="Last Update";
 "今天"="Today";
@@ -492,3 +493,12 @@
 // ************* 工单语音回复新增 END****************
 "删除回复" = "Delete reply";
 
+
+
+"已选"="Selected";
+"全国搜索"="National search";
+"省"="Province";
+"市"="City";
+"县（区）"="County (District)";
+"街道"="Street";
+"无结果"="No result";

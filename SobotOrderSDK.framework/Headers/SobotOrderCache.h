@@ -45,7 +45,39 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) SobotOrderPageLoadBlock pageLoadBlock;
 
 
+/// 2.0.3版本弃用
+/// - Parameters:
+///   - loginAcount: 坐席账号
+///   - loginPwd: 密码
+///   - token: 坐席token（公司token，可以使用loginWithCommpanyToken替换）
+///   - resultBlock:
 -(void)doLogin:(NSString * _Nullable) loginAcount pwd:(NSString *  _Nullable) loginPwd token:(NSString *  _Nullable) token result:(void(^)(NSInteger code,NSDictionary * _Nullable dict,NSString * _Nullable msg)) resultBlock;
+
+
+/// 2.0.3新增，替换带token方法
+/// - Parameters:
+///   - loginAcount: 账号
+///   - loginPwd: 密码
+///   - resultBlock:结果
+-(void)doLogin:(NSString *  _Nullable)loginAcount pwd:(NSString *  _Nullable)loginPwd result:(void (^)(NSInteger, NSDictionary * _Nullable, NSString * _Nullable))resultBlock;
+
+
+/// 使用appid和appkey登录
+/// - Parameters:
+///   - appkey: 公司appkey
+///   - appid: 公司appid
+///   - email: 要登录的坐席账号
+///   - resultBlock: 结果
+-(void)loginWithAppkey:(NSString * _Nonnull) appkey appid:(NSString *  _Nonnull) appid email:(NSString *  _Nonnull) email result:(void(^)(NSInteger code,NSDictionary * _Nullable dict,NSString * _Nullable msg)) resultBlock;
+
+
+/// 使用公司token登录
+/// - Parameters:
+///   - token: 公司token
+///   - email: 要登录的坐席账号
+///   - resultBlock: 结果
+-(void)loginWithCommpanyToken:(NSString * _Nonnull) token email:(NSString *  _Nonnull) email result:(void(^)(NSInteger code,NSDictionary * _Nullable dict,NSString * _Nullable msg)) resultBlock;
+
 
 // 查询登录信息
 -(SobotLoginEntity *) getLoginUser;
