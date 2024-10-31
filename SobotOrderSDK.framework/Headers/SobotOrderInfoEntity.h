@@ -40,6 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SobotOrderDetailEntity : SobotBaseEntity
 
+// 工单机器人处理状态 0 纯人工处理（历史数据为null） 1 机器人处理 2 机器人处理后转人工处理
+    // 状态为 1 时应当禁用编辑等功能
+@property(nonatomic , assign) int robotHandleStatus;
 
 //typedef enum kOrderModelType {
 //    orderModelType_normal  = 0,
@@ -160,6 +163,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 0 所有人，1仅客服
 @property (nonatomic, assign) int      replyType;//
 @property (nonatomic, strong) NSString *replyTypeText;//
+
+@property (nonatomic, assign) int      startType;//更新人类型：0客服，1普通用户 2触发器 3工单机器人
 
 
 @property(nonatomic,assign) int dealLogType;// 回复类型 1 代表是语音回复

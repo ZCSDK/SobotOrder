@@ -87,7 +87,7 @@
 "模糊搜索" = "Fuzzy Search";
 "昵称不能为空!" = "Nickname cannot be blank!";
 "拍照" = "Photo";
-"普通用户APP提交" = "APP General User Submission";
+"普通用户APP提交" = "App General User Submission";
 "普通用户微博提交" = "Weibo General User Submission";
 "普通用户微信提交" = "WeChat General User Submission";
 "奇虎360" = "Qihoo 360";
@@ -144,6 +144,7 @@
 "提交" = "Submit";
 "添加" = "Add";
 "添加客户" = "Add customer";
+"音频" = "MP3";
 "图片" = "Image";
 "退出" = "Quit";
 "网络错误，请检查网络后重试" = "Network error, please check the network and try again";
@@ -221,6 +222,16 @@
 "上传中" = "Uploading";
 "上传成功" = "Upload succeeded";
 "要删除这张图片吗？" = "Do you want to delete this picture?";
+
+
+"流转触发器"="Flow Trigger";
+"自动化任务"="Automations";
+"问答机器人规则"="Q&A bot rules";
+"机器人"="Bot";
+"系统操作"= "System operation";
+"("="(";
+")"=")";
+"客户" = "Customer";
 
 // 接口返回的字段 code 处理 提示语
 "400001" = "Creation time cannot be blank";
@@ -496,9 +507,10 @@
 
 
 "已选"="Selected";
-"全国搜索"="National search";
-"省"="Province";
-"市"="City";
-"县（区）"="County (District)";
-"街道"="Street";
+"搜索全部省"="Search all provinces";
+"搜索全部市"="Search all cities";
+"搜索全部县（区）"="Search all counties (districts)";
+"搜索全部街道"="Search all streets";
 "无结果"="No result";
+
+"已停用字段" = "Disabled Field";

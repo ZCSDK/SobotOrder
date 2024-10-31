@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) SobotOrderDetailEntity *model;
 @property (nonatomic,copy) NSString * ticketId; // 当前从设置页面跳转到 工单详情页面时使用 无工单model
 @property (nonatomic,copy) LoadDataBlock loadDatablock;
-
+@property (nonatomic,copy) NSString *customId;// 从用户中心进入的需要 用户ID
 @end
 
 NS_ASSUME_NONNULL_END

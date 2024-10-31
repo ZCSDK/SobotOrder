@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name             = "SobotOrderSDK"
 
-s.version          = "2.0.3"
+s.version          = "2.0.4"
 
 s.summary          = "sobot order sdk"
 s.description      = <<-DESC
@@ -21,7 +21,7 @@ s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
 s.resources = 'SobotOrder.bundle'
 s.ios.vendored_frameworks = 'SobotOrderSDK.framework'
-s.dependency 'SobotCommon','2.2.0'
+s.dependency 'SobotCommon','2.3.0'
 
 
 end

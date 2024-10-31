@@ -33,6 +33,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param kitConfig  congfig配置
 +(void)configKitInfo:(SobotKitConfig *) kitConfig;
 
+
+/// 更新当前翻译
+/// - Parameter language: 更新的语语言，如果为空默认为登录语言
++(void)checkUpdateLanguage:(NSString * _Nullable) language;
+
 /// 初始化配置
 /// @param host 域名
 /// @param config  SobotCacheEntity 配置类
@@ -60,6 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param resultBlock 回调结果
 +(void)startOrderDetail:(UIViewController *) vc orderId:(NSString *) ticketId  result:(SobotResultBlock) resultBlock;
 
+///
+///
+/// @param formPage 从哪个页面进入的工单SDK详情页  // 1，新增，2搜索 3列表 4.点击推送都详情页 5.来只用户收索页面 6设置页面工单通知页面 
++(void)startOrderDetail:(UIViewController *) vc orderId:(NSString *) ticketId customId:(NSString *)customId fromPage:(int)fromPage result:(SobotResultBlock) resultBlock;
 /// // 直接进入创建工单页面 创建工单，提交后退出
 /// @param vc  启动VC
 /// @param params 入参  @{@"uname':@"传创建工单的客服昵称",@"userId":@"传创建工单的客服ID"}
